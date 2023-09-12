@@ -4,7 +4,16 @@ import { Button } from "./components/ui/button";
 export function App() {
 
   return (
-    <Button>Hello World</Button>
+    <div>
+      <div className="px-6 py-3 flex items-center justify-between border-b">
+        <h1 className="text-xl font-bold">uload.ai</h1>
+
+        <div className="flex items-center gap-3">
+          <span className="text-sm text-muted-foreground">Desenvolvido com ❤ no NLW da Rockeatseat</span>
+          <Button>Github</Button>
+        </div>
+      </div>
+    </div>
   )
 }
 

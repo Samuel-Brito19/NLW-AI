@@ -3,7 +3,7 @@ import { Button } from "./components/ui/button";
 import { Separator } from "./components/ui/separator";
 import { Textarea } from "./components/ui/textarea";
 import { Label } from "./components/ui/label";
-
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./components/ui/select";
 
 export function App() {
 
@@ -66,8 +66,27 @@ export function App() {
 
           <form className="space-y-6">
             <div className="space-y-2">
-              <Label>modelo</Label>
+              <Label>Modelo</Label>
+              <Select defaultValue="gpt3.5">
+                <SelectTrigger>
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="gpt3.5">GPT 3.5-turbo 16k</SelectItem>
+                </SelectContent>
+              </Select>
+              <span className="block text-xs text-muted-foreground italic"
+              >Você poderá customizar essa opção em breve</span>
             </div>
+
+            <Separator />
+            <div className="space-y-2">
+              <Label>Temperatura</Label>
+
+              <span className="block text-xs text-muted-foreground italic"
+              >Valores mais altos tendem a deixar o resultado mais criativo e com possíveis erros</span>
+            </div>
+
           </form>
         </aside>
 
